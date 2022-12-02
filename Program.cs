@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 namespace dotnetcore;
 
 
@@ -86,12 +86,27 @@ public class Atm{
 
     class Program
     {
+
+
+        //create the list of users
+    
         static void Main(string[] args)
         {
+             //create the list of users
+            List<Atm> clients = new List<Atm>();
+            Atm user_1 = new Atm("John", "DOE", 3200, 1234);
+            Atm user_2 = new Atm("Joe", "smith", 400.50, 16634);
+
+            Atm user_3 = new Atm("Pat", "rick", 33.75, 329);
+        
+            clients.Add(user_1);
+            clients.Add(user_2);
+
             //here create any number of users
-            Console.WriteLine("Welcome to this atm amchine. Please enter your card Pin number");
+            Console.WriteLine("Welcome to this atm machine. Please enter your card Pin number");
             Console.ReadLine();
 
+    
 
             
         }
